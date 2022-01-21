@@ -4,7 +4,9 @@
   "description": "Web Automation Testing Project Using Test Cafe Framework",
   "main": "./test/test.js",
   "scripts": {
-    "test": "testcafe all ./test/test.js"
+    "test_chrome": "testcafe chrome ./test/test.js",
+    "test_firefox": "testcafe firefox ./test/test.js",
+    "test_all": "testcafe all ./test/test.js"
   },
   "repository": {
     "type": "git",

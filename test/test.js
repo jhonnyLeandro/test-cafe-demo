@@ -1,8 +1,12 @@
-import { Selector } from 'testcafe';
 
-fixture`Getting Started`
-    .page`http://devexpress.github.io/testcafe/example`;
 
-test('My first test', async t => {
-    // Test code
+fixture`sauceDemo`
+    .page`https://www.saucedemo.com/`;
+
+import loginPage  from './pages/Login';
+import inventoryPage from './pages/inventory';
+
+test('Login to saucedemo page', async t => {
+    await loginPage.loginToApplication('standard_user', 'secret_sauce');
+    await inventoryPage.productTitleShouldbeVisible();
 });
